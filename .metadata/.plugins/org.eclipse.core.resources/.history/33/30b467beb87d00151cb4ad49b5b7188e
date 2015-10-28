@@ -1,0 +1,35 @@
+package HelperClass;
+import java.util.ArrayList;
+import java.util.HashMap;
+
+public class environment {
+
+	public ArrayList<Block> listOfBlocks;
+	public String FOLFile;
+	public String LOGFile;
+	public HashMap<String,ArrayList<Block>> colorMap=new HashMap<String,ArrayList<Block>>();
+	
+	boolean initiate(ArrayList<Block> BlockList,String FOLFile,String LOGFile){
+		// Read user file and create environment
+		// Do validation before creating blocks.
+		for(Block entry : BlockList){
+			if(colorMap.containsKey(entry.getColor())){
+				System.out.println("\n *** ERROR : Two or more blocks has same color.");
+				System.out.println("\n Please give different color to each block in config file");
+				System.out.println("\n Exiting the program");
+				return false;
+			}
+			else{
+				colorMap.put(entry.getColor(),entry);
+			}
+		}
+		return true;
+	}
+	
+	void move(String color1,String color2){
+		// Get Block of color1 and color2
+		// Validate before moving Blocks
+		
+	}
+	
+}

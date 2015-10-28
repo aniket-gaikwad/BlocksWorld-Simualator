@@ -1,0 +1,16 @@
+package HelperClass;
+
+import java.util.ArrayList;
+
+import Initializer.readConfFile;
+
+public class BlocksSimulator {
+	static ArrayList<Block> BlockList;
+	static environment e;
+	public static void main(String args[]){
+		String configFile="D:\\Fall 2015\\Lab\\BlocksWorlds\\BlocksWorld-Simulator\\BlocksWorlds\\src\\InitialFiles.txt";
+		readConfFile rcf=new readConfFile();
+		BlockList=rcf.readConfigFile(configFile);
+		e=new envirnoment();
+	}
+}

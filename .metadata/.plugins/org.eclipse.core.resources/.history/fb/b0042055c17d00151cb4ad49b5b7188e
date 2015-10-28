@@ -1,0 +1,31 @@
+package HelperClass;
+
+import java.util.ArrayList;
+
+import Initializer.readConfFile;
+
+public class BlocksSimulator {
+	static ArrayList<Block> BlockList;
+	static environment e;
+	static String configFile="D:\\Fall 2015\\Lab\\BlocksWorlds\\BlocksWorld-Simulator\\BlocksWorlds\\src\\InitialFiles\\Config.txt";
+	static String FOLFile="D:\\Fall 2015\\Lab\\BlocksWorlds\\BlocksWorld-Simulator\\BlocksWorlds\\src\\Output\\FOL.txt";
+	static String LOGFile="D:\\Fall 2015\\Lab\\BlocksWorlds\\BlocksWorld-Simulator\\BlocksWorlds\\src\\Output\\LOG.txt";
+	public static void main(String args[]){
+		
+		readConfFile rcf=new readConfFile();
+		BlockList=rcf.readConfigFile(configFile);
+		if(BlockList.isEmpty()){
+			System.out.println("\n No blocks added for simulations...Exiting \n");
+			return;
+		}
+		e=new environment();
+		if(e.initiate(BlockList,FOLFile,LOGFile)){
+			// Initiation Success
+		}
+		else{
+			return;
+		}
+	return;
+	}
+	
+}

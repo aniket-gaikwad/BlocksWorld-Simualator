@@ -1,0 +1,10 @@
+package HelperClass;
+
+public class BlocksSimulator {
+
+	public static void main(String args[]){
+		String configFile="D:\\Fall 2015\\Lab\\BlocksWorlds\\BlocksWorld-Simulator\\BlocksWorlds\\src\\InitialFiles.txt";
+		readConfFile rcf=new readConfFile();
+		
+	}
+}
