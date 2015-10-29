@@ -1,7 +1,11 @@
 package Initializer;
 
 public class validator {
-	
+	/*
+	 * Author : Aniket Gaikwad
+	 * Date : 28th Oct 15
+	 * 
+	 * */
 	public static boolean isCoordiantesOK(int x1,int y1,int z1,int x2,int y2,int z2,
 			int x3,int y3,int z3,int x4,int y4,int z4){
 		/*
