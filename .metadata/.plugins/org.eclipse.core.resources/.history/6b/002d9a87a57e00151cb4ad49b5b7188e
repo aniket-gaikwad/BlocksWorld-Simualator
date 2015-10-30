@@ -51,14 +51,12 @@ public class validator {
 		for(Block entry : BlockList){
 			if(block.getX1()==entry.getX1() && block.getY1()==entry.getY1() && block.getZ1()==entry.getZ1()){
 				if(block.getX3()==entry.getX3() && block.getY3()==entry.getY3() && block.getZ3()==entry.getZ3()){
-					System.out.println("\n Error while adding block : "+block.getId());
 					System.out.println("\n 1st and 3rd same");
 					return false;
 				}
 			}
 			if(block.getX2()==entry.getX2() && block.getY2()==entry.getY2() && block.getZ2()==entry.getZ2()){
 				if(block.getX4()==entry.getX4() && block.getY4()==entry.getY4() && block.getZ4()==entry.getZ4()){
-					System.out.println("\n Error while adding block : "+block.getId());
 					System.out.println("\n 2nd and 4th same");
 					return false;
 				}

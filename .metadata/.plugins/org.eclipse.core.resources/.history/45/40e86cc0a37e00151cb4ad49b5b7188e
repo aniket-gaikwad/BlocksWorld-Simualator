@@ -54,12 +54,12 @@ public class readConfFile {
                 Block newBlock = new Block(count,x1,y1,z1,x2,y2,z2,x3,y3,z3,
             			x4,y4,z4,color);
                 count+=1;
-                if(!validator.isTwoBlocksSame(BlockList,newBlock)){
+                if(isTwoBlocksSame(BlockList,newBlock)){
                 	System.out.println("\nError : Invalid Configuration File given");
                 	System.out.println("\n Giving two similar coordinate blocks.");
                 	return null;
                 }
-                BlockList.add(newBlock);
+                BlockList.add(newBlock,newBlock);
             }
             return BlockList;
         } catch (FileNotFoundException e) {

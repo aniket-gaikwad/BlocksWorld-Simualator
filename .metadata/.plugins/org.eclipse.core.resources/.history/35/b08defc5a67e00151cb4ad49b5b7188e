@@ -174,8 +174,8 @@ public class environment {
 				
 			}
 		this.reward=true;
-		block2.isTakenAction=true;
 		this.predicateLogic();
+		block2.isTakenAction=true;
 		return this.reward;
 		
 		

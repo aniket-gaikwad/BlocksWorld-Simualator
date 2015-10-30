@@ -20,7 +20,7 @@ public class BlocksSimulator {
 		readConfFile rcf=new readConfFile();
 		BlockList=rcf.readConfigFile(configFile);
 		
-		if(BlockList==null || BlockList.isEmpty()){
+		if(BlockList.isEmpty() || BlockList==null){
 			System.out.println("\n No blocks added for simulations...Exiting \n");
 			return;
 		}
